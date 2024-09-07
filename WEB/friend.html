@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friend</title>
+    <link rel="stylesheet" href="friend.css">
+    <link rel="stylesheet" href="hfoot.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">FRIEND</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="magazine.html">Magazine</a></li>
+                <li class="dropdown">
+                    <a href="about.html">About Me</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a href="resume.html">Resume</a></li>
+                        <li class="dropdown-item"><a href="family.html">Family</a></li>
+                        <li class="dropdown-item"><a href="friend.html">Friends</a></li>
+                        <li class="dropdown-item"><a href="csevent.html">CS Event</a></li>
+                    </ul>
+                </li>
+                <li><a href="um.html">UM History</a></li>
+                <li><a href="cs.html">CS History</a></li>
+                <li><a href="business.html">Business</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <article class="friend-section">
+        <h1>My Friends and my Allies</h1>
+        <p class="description">A glimpse of my cherished friends.</p>
+
+        <div class="slideshow-container">
+            <div class="slide">
+                <img src="01.jpg" alt="friend Photo 1">
+            </div>
+            <div class="slide">
+                <img src="02.jpg" alt="friend Photo 2">
+            </div>
+            <div class="slide">
+                <img src="03.jpg" alt="friend Photo 3">
+            </div>
+            <div class="slide">
+                <img src="04.jpg" alt="friend Photo 4">
+            </div>
+            <div class="slide">
+                <img src="05.jpg" alt="friend Photo 5">
+            </div>
+
+            <!-- Arrows -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </article>
+
+    <footer>
+        <p>&copy; 2024 Elegant Eyeglass Shades. All rights reserved.</p>
+        <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+    </footer>
+
+    <script src="friend.js"></script>
+</body>
+
+</html>
