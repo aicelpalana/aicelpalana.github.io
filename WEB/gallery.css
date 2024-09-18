@@ -1,0 +1,170 @@
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    background-image: url('images/hero-background.jpg');
+    background-size: cover;
+    color: hsl(0, 0%, 5%);
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.gallery {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #ecf0f1;
+}
+
+.gallery h3 {
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-item {
+    width: 22%;
+    margin: 1%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid #3498db;
+    /* Frame color */
+}
+
+.top-sale-badge {
+    background-color: #ff6b6b;
+    /* Bright color for visibility */
+    color: white;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    /* Limiting the height */
+    object-fit: cover;
+    /* Ensures image covers the area */
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item p {
+    padding: 10px;
+    font-size: 18px;
+    color: #555;
+}
+
+.gallery-item .shade1 {
+    color: #e74c3c;
+    /* Red for Clasico CC34 */
+}
+
+.gallery-item .shade2 {
+    color: #f39c12;
+    /* Orange for Belle Be02 */
+}
+
+.gallery-item .shade3 {
+    color: #27ae60;
+    /* Green for All Day Ad01 */
+}
+
+.gallery-item .shade4 {
+    color: #3498db;
+    /* Blue for Vera Yc2120 */
+}
+
+.gallery-item .shade5 {
+    color: #8e44ad;
+    /* Purple for Clasical CC29 */
+}
+
+.gallery-item .shade6 {
+    color: #ad4486;
+}
+
+.gallery-item .shade7 {
+    color: #ad7344;
+}
+
+.gallery-item .shade8 {
+    color: #ad4444;
+}
+
+.gallery-item .shade9 {
+    color: #ada644;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    border-color: #2ecc71;
+    /* Change border color on hover */
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

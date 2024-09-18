@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="hfoot.css">
+    <style>
+        /* Add styles here for the map container */
+        
+        .map-container {
+            width: 100%;
+            max-width: 400px;
+            /* Smaller width for the map */
+            height: 300px;
+            /* Adjust height as needed */
+            margin: auto;
+            padding: 20px;
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            /* Full height of the container */
+            border: 0;
+        }
+        /* Container for map and contact-info */
+        
+        .contact-map-container {
+            display: flex;
+            align-items: flex-start;
+            /* Align items at the top */
+            gap: 20px;
+            /* Space between map and contact info */
+            padding: 20px;
+            flex-wrap: wrap;
+            /* Allow wrapping on smaller screens */
+        }
+        
+        .map-container-wrapper {
+            flex: 1;
+            /* Allow the map container to take available space */
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: 1fr;
+            /* Single column layout */
+            gap: 10px;
+            /* Space between social items */
+            flex: 1;
+            /* Allow contact info to take available space */
+        }
+        
+        .contact-info .details,
+        .contact-info .social {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-info .details {
+            grid-column: span 1;
+            /* Span 1 column */
+        }
+        
+        .contact-info .social {
+            grid-column: span 1;
+            /* Span 1 column */
+            display: grid;
+            grid-template-columns: 1fr;
+            /* One column layout for small screens */
+            gap: 10px;
+            /* Space between social items */
+        }
+        
+        .contact-info .social .social-item {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .contact-info .social .social-item a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+        
+        .contact-info .social .social-item a:hover {
+            text-decoration: underline;
+        }
+        
+        .contact-info .social .social-item img {
+            width: 30px;
+            height: 30px;
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-map-container {
+                flex-direction: column;
+                /* Stack map and contact info vertically on small screens */
+            }
+        }
+        /* Make the "Find us at the following location:" header black */
+        
+        .Contact Us h1 {
+            color: black;
+        }
+        /* Make the "Find us at the following location:" text black */
+        
+        .container p {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Elegant Eyeglass Shades</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="magazine.html">Magazine</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="um.html">UM History</a></li>
+                <li><a href="cshistory.html">CS History</a></li>
+                <li><a href="business.html">Business</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="WINDOWS.html">WINDOWS</a></li>
+                <li><a href="macos.html">macOS</a></li>
+                <li><a href="IOS.html">IOS</a></li>
+                <li><a href="ANDROID.html">ANDROID</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="container">
+        <h1>Contact Us</h1>
+        <p>Find us at the following location:</p>
+
+        <!-- Container for map and contact-info -->
+        <div class="contact-map-container">
+            <div class="map-container-wrapper">
+                <!-- Embed Google Map -->
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13676.979850019152!2d120.9795291507563!3d14.599512399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397ca03571ec38b%3A0x69d1d5751069c11f!2sManila%2C%20Metro%20Manila%2C%20Philippines!5e0!3m2!1sen!2sus!4v1696880913406!5m2!1sen!2sus"
+                        allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="contact-info">
+                <div class="details">
+                    <p>Address: 275 San Nicolas Binondo Manila</p>
+                    <p>Email: aicelpalana08@gmail.com</p>
+                    <p>Mobile: (+63) 9066880600</p>
+                </div>
+                <div class="social">
+                    <div class="social-item">
+                        <a href="https://www.facebook.com/0908AICEL" target="_blank">
+                            <img src="fff.webp" alt="Facebook"> Facebook
+                        </a>
+                    </div>
+                    <div class="social-item">
+                        <a href="https://www.instagram.com/aicelpalana/">
+                            <img src="igg.webp" alt="Instagram"> Instagram
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-info">
+            <p>&copy; 2024 Elegant Eyeglass Shades. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

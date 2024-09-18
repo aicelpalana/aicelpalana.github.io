@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eyeglass Shades Collection</title>
+    <link rel="stylesheet" href="linux.css">
+    <link rel="stylesheet" href="hfoot.css">
+    <style>
+        .article-content {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .article-details p {
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+        
+        .navigation-buttons {
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .navigation-buttons button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+        }
+        
+        .navigation-buttons button:disabled {
+            background-color: #888;
+            cursor: not-allowed;
+        }
+        
+        body {
+            font-family: Century, bold, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2e9;
+            color: #121111;
+        }
+        
+        .article-section h1 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .article-content {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        .article-content img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 5px;
+            object-fit: cover;
+            animation: slideIn 1s ease-in-out;
+        }
+        
+        .article-details {
+            text-align: center;
+        }
+        
+        .article-details h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .article-details p {
+            margin: 20px 0;
+            line-height: 1.6;
+            text-align: justify;
+            text-indent: 40px;
+        }
+        
+        .article-details strong {
+            font-weight: bold;
+        }
+        
+        .section-image img {
+            width: 150px;
+            height: auto;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideIn {
+            from {
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>OPERATING SYSTEM</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="magazine.html">Magazine</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="um.html">UM History</a></li>
+                <li><a href="cshistory.html">CS History</a></li>
+                <li><a href="business.html">Business</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="WINDOWS.html">WINDOWS</a></li>
+                <li><a href="linux.html">Linux</a></li>
+                <li><a href="macos.html">macOS</a></li>
+                <li><a href="IOS.html">IOS</a></li>
+                <li><a href="ANDROID.html">ANDROID</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Windows Section -->
+        <article class="article-section">
+            <h1>Linux</h1>
+            <div class="section-image" style="text-align: center; margin-top: 20px;">
+                <img src="linux.png" alt="Windows Image">
+            </div>
+            <div class="article-content" id="section1">
+                <div class="article-details">
+                    <h2>Linux</h2>
+                    <p>Linux (/ˈlɪnʊks/, LIN-uuks)[11] is a generic name for a family of open-source Unix-like operating systems based on the Linux kernel,[12] an operating system kernel first released on September 17, 1991, by Linus Torvalds.[13][14][15]
+                        Linux is typically packaged as a Linux distribution (distro), which includes the kernel and supporting system software and libraries, many of which are provided by the GNU Project. Popular Linux distributions[16][17][18] include
+                        Debian, Fedora Linux, Arch Linux, and Ubuntu. Commercial distributions include Red Hat Enterprise Linux and SUSE Linux Enterprise. Desktop Linux distributions include a windowing system such as X11 or Wayland and a desktop environment
+                        such as GNOME, KDE Plasma or Xfce. Distributions intended for servers may not have a graphical user interface at all or include a solution stack such as LAMP. Many Linux distributions use the word "Linux" in their name, but the
+                        Free Software Foundation uses and recommends the name "GNU/Linux" to emphasize the use and importance of GNU software in many distributions, causing some controversy.[19][20] Because Linux is freely redistributable, anyone may
+                        create a distribution for any purpose.[21]
+                    </p>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 EyeglassShades. All rights reserved.</p>
+        <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+    </footer>
+
+    <script>
+        let currentSection = 0;
+        const sections = document.querySelectorAll('.article-content');
+
+        function navigate(direction) {
+            if (direction === 1 && currentSection < sections.length - 1) {
+                sections[currentSection].style.display = 'none';
+                currentSection++;
+                sections[currentSection].style.display = 'block';
+            } else if (direction === -1 && currentSection > 0) {
+                sections[currentSection].style.display = 'none';
+                currentSection--;
+                sections[currentSection].style.display = 'block';
+            }
+            updateButtons();
+        }
+
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = currentSection === 0;
+            document.getElementById('nextBtn').disabled = currentSection === sections.length - 1;
+        }
+
+        // Initialize the first section
+        sections.forEach((section, index) => {
+            if (index !== 0) section.style.display = 'none';
+        });
+        updateButtons();
+    </script>
+</body>
+
+</html>
